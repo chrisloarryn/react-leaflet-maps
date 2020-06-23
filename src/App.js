@@ -25,7 +25,7 @@ const csvDataHandler = async (url) => {
 export default function App() {
     let monuments;
     const [csvLines, setCsvLines] = useState(null);
-    //useEffect
+    // useEffect
     useEffect(() => {
         const csv =
             "http://cswcl.github.io/fake-api/monumentos_historicos_extracto.csv";
@@ -36,7 +36,7 @@ export default function App() {
                 }
             });
         }
-    }, [csvLines]); //Pass Array as second argument
+    }, [csvLines]); // Pass Array as second argument
 
     const url =
         "https://cswcl.github.io/fake-api/monumentos_historicos_extracto.geojson";
@@ -51,7 +51,7 @@ export default function App() {
                 longitude: coordinatesCopy[0],
             };
             Object.assign(m.geometry, {coordinates: coordinates});
-            //console.log(m)
+            // console.log(m)
         });
 
     monuments =
